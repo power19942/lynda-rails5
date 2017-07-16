@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(version: 20170711093033) do
     t.index ["username"], name: "index_admin_users_on_username", using: :btree
   end
 
-  create_table "admin_users_pages", id: false, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+  create_table "admin_users_pages_joins", id: false, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
     t.integer "admin_user_id"
     t.integer "page_id"
     t.index ["admin_user_id", "page_id"], name: "index_admin_users_pages_joins_on_admin_user_id_and_page_id", using: :btree
